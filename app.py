@@ -7,7 +7,7 @@ from sklearn.ensemble import RandomForestRegressor
 # Load and train model
 @st.cache_resource
 def load_model():
-    df = pd.read_csv("weather_history.csv")
+    df = pd.read_csv("weatherHistory.csv")
 
     # Drop columns that are not needed
     df = df.drop(columns=["Summary", "Precip Type", "Daily Summary", "Formatted Date"], errors='ignore')
