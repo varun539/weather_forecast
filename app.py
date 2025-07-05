@@ -7,7 +7,7 @@ from sklearn.ensemble import RandomForestRegressor
 # Load trained model
 @st.cache_resource
 def load_model():
-    df = pd.read_csv("weather_clean.csv")
+    df = pd.read_csv("weather_History.csv")
     df = df.drop(columns=["Summary", "Precip Type", "Daily Summary"])
     X = df.drop(columns=["Temperature (C)"])
     y = df["Temperature (C)"]
